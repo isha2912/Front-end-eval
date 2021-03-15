@@ -21,7 +21,8 @@ function App() {
     setIsSynced(true);
   });
   const handleToggle = (() => {
-    setIsToggled(true);
+    const toggleVal = isToggled;
+    setIsToggled(!toggleVal);
     const songArray = songs;
     const groupedSongs = groupData.groupByGenre(songArray);
     setGenreSongs(groupedSongs);

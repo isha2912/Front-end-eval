@@ -29,7 +29,6 @@ exports[`Card Should match snapshot 1`] = `
         </div>
       </div>
       <button
-        class="heart-button"
         type="button"
       >
         <img

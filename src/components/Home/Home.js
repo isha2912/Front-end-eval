@@ -31,6 +31,7 @@ const Home = (({
   return (
     <div className="main-container">
       <h1> Genre</h1>
+      <button type="button" onClick={handleToggle}> toggle</button>
       <div>
         {Object.keys(genreSongs).map((eachGenre) => (
           <div key={eachGenre} className="row">

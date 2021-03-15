@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Like Should match screenshot 1`] = `
+<div>
+  <button
+    type="button"
+  >
+    <img
+      alt="heart"
+      src="./assets/heart-gray.svg"
+    />
+  </button>
+</div>
+`;
