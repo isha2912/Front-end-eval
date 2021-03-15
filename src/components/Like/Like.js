@@ -1,10 +1,10 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import getData from '../../utils/axiosUtil';
 
 const Like = (({ eachSong }) => {
   const [likeData, setLikeData] = useState({});
-  let src = '';
+  let src = './assets/heart-gray.svg';
   useEffect(async () => {
     const like = await getData.getLikes(eachSong.id);
     setLikeData(like.data);
@@ -19,7 +19,7 @@ const Like = (({ eachSong }) => {
 
     if (likeData.like === true) {
       src = './assets/heart-red.svg';
-    } else { src = './assets/heart-gray.svg'; }
+    }
   });
 
   return (
@@ -31,3 +31,9 @@ const Like = (({ eachSong }) => {
 }
 );
 export default Like;
+Like.propTypes = {
+  eachSong: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+
+  }).isRequired,
+};
