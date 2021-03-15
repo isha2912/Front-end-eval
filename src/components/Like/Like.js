@@ -4,26 +4,29 @@ import getData from '../../utils/axiosUtil';
 
 const Like = (({ eachSong }) => {
   const [likeData, setLikeData] = useState({});
-  let src = './assets/heart-gray.svg';
+  let isClicked = 0;
+  let src = '';
+  if (!isClicked) { src = './assets/heart-gray.svg'; }
   useEffect(async () => {
     const like = await getData.getLikes(eachSong.id);
     setLikeData(like.data);
-  });
+  }, [likeData]);
   const handleLike = (async () => {
+    isClicked = !isClicked;
+    if (isClicked) {
+      src = './assets/heart-red.svg';
+    }
     const isLiked = likeData.like;
     const newLike = {
       like: (!isLiked),
     };
     const updateLike = await getData.updateLike(eachSong.id, newLike);
     setLikeData(updateLike.data);
-
-    if (likeData.like) {
-      src = './assets/heart-red.svg';
-    }
+    isClicked = 0;
   });
 
   return (
-    <button className="heart-button" type="button" onClick={handleLike}>
+    <button type="button" onClick={handleLike}>
       <img src={src} alt="heart" />
       {likeData.count}
     </button>

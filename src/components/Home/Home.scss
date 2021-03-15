@@ -3,15 +3,23 @@
     background-color: #38497E;
     position: absolute;
     top: 50%;
-    height: 1rem;
-    width: 3rem;
+    height: 2rem;
+    width: 5rem;
     color: white;
 }
 .wait{
      text-align: center;
+     align-items: center;
     
 }
-
+// .temp1{
+//     position: absolute;
+//     top: 48%;
+// }
+// .temp2{
+//     position: absolute;
+//     top: 47%;
+// }
 .home-container{
     display: flex;
     flex-direction: row;
@@ -22,4 +30,17 @@
 
 .main-container{
     padding: 10rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .home-container{
+         flex-direction: column;
+         padding: auto;
+         margin: auto
+
+    }
+    .main-container{
+        padding: 0;
+        margin: 0;
+    }
 }

@@ -10,8 +10,8 @@ const Home = (({
   if (!isSynced) {
     return (
       <div className="wait">
-        <div> :((</div>
-        <div> Seems a bit empty here</div>
+        <div className="temp2"> :((</div>
+        <div className="temp1"> Seems a bit empty here</div>
         <button className="temp" type="button" onClick={handleClick}>Sync </button>
       </div>
     );
