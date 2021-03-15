@@ -10,4 +10,12 @@ const getSongs = (async () => {
   return responseSongs.data;
 });
 
-export default getSongs;
+const getLikes = (async (id) => {
+  const responseLike = await axios.get(`/api/records/${id}/likes`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return responseLike.data;
+});
+export default { getSongs, getLikes };

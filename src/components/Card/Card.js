@@ -15,7 +15,7 @@ const Card = (({ eachSong }) => (
         </div>
         <div>{eachSong.artist.name}</div>
       </div>
-      <Like />
+      <Like eachSong={eachSong} />
     </div>
   </div>
 ));
