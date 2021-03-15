@@ -1,10 +1,13 @@
 import axios from 'axios';
-import { token } from '../../Token';
+import token from '../Token';
 
 const getSongs = (async () => {
-  const responseSongs = await axios.get('https://api.github.com/user', {
+  const responseSongs = await axios.get('/api/records', {
     headers: {
       Authorization: `Bearer ${token}`,
     },
   });
+  return responseSongs.data;
 });
+
+export default getSongs;
