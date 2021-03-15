@@ -3,11 +3,12 @@
 exports[`Card Should match snapshot 1`] = `
 <div>
   <div
-    class="card"
+    class="card2"
   >
     <img
       alt="img"
       class="song-image"
+      data-testid="img-tag"
       src="url"
     />
     <div

@@ -6,7 +6,7 @@ import './Card.scss';
 const Card = (({ eachSong, index }) => (
 
   <div className={index % 2 === 0 ? 'card' : 'card2'}>
-    <img className="song-image" src={eachSong.albumArtUrl} alt="img" />
+    <img data-testid="img-tag" className="song-image" src={eachSong.albumArtUrl} alt="img" />
     <div className="container-top">
       <div className="container-bottom">
         <div className="song-name">

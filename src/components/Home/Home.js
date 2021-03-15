@@ -4,7 +4,6 @@ import Card from '../Card/Card';
 import './Home.scss';
 
 const Home = (({
-  // eslint-disable-next-line no-unused-vars
   isSynced, handleClick, songs, genreSongs, handleToggle, isToggled,
 }) => {
   if (!isSynced) {
@@ -35,12 +34,20 @@ const Home = (({
       <div>
         {Object.keys(genreSongs).map((eachGenre) => (
           <div key={eachGenre} className="row">
-            <h1>{eachGenre}</h1>
+            <>
+              <h1>
+                {eachGenre}
+              </h1>
+              <img src="./assets/genre-bollywood.png" alt="genre" />
+              {' '}
+
+            </>
             <div className="home-container">
-              {genreSongs[eachGenre].map((eachSong) => (
+              {genreSongs[eachGenre].map((eachSong, i) => (
                 <Card
                   key={eachSong.id}
                   eachSong={eachSong}
+                  index={i}
                 />
               ))}
             </div>
@@ -57,5 +64,8 @@ export default Home;
 //   songs: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
 //   handleClick: PropTypes.func.isRequired,
 //   isSynced: PropTypes.bool().isRequired,
+//   genreSongs: PropTypes.shape().isRequired,
+//   isToggled: PropTypes.number.isRequired,
+//   handleToggle: PropTypes.func.isRequired,
 
 // };

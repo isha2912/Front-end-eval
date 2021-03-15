@@ -1,25 +1,20 @@
 .temp{
     border-radius: 3px;
     background-color: #38497E;
-    position: absolute;
-    top: 50%;
     height: 2rem;
     width: 5rem;
     color: white;
 }
 .wait{
-     text-align: center;
-     align-items: center;
+
+    position: absolute;
+    top:50%;
+    align-items:center;
+    text-align: center;
+    width: 100%;
     
 }
-// .temp1{
-//     position: absolute;
-//     top: 48%;
-// }
-// .temp2{
-//     position: absolute;
-//     top: 47%;
-// }
+
 .home-container{
     display: flex;
     flex-direction: row;
@@ -42,5 +37,19 @@
     .main-container{
         padding: 0;
         margin: 0;
+    }
+    .song-image{
+        height:12rem;
+        width:12rem;
+        border-radius: 120%;
+        border:solid black
+    }
+    .card{
+        width:auto;
+        margin-bottom: 0.5rem;
+    }
+    .card2{
+        width:auto;
+        margin-bottom: 0.5rem;
     }
 }
