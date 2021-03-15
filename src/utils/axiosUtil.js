@@ -18,4 +18,13 @@ const getLikes = (async (id) => {
   });
   return responseLike.data;
 });
-export default { getSongs, getLikes };
+
+const updateLike = (async (id, responseBody) => {
+  const responseLike = await axios.patch(`/api/records/${id}/likes`, responseBody, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return responseLike.data;
+});
+export default { getSongs, getLikes, updateLike };
