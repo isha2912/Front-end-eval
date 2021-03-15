@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Should match snapshot 1`] = `
+<div>
+  <div
+    class="nav-bar"
+  >
+    My
+    <b>
+       Record 
+    </b>
+    shelf
+  </div>
+</div>
+`;

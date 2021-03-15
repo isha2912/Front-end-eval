@@ -22,7 +22,7 @@ const Home = (({
         <h1>All songs</h1>
         <button type="button" onClick={handleToggle}> toggle</button>
         <div className="home-container">
-          { songs.map((eachSong) => <Card key={eachSong.id} eachSong={eachSong} />)}
+          { songs.map((eachSong, i) => <Card key={eachSong.id} eachSong={eachSong} index={i} />)}
         </div>
       </div>
 

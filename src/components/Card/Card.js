@@ -3,9 +3,9 @@ import React from 'react';
 import Like from '../Like/Like';
 import './Card.scss';
 
-const Card = (({ eachSong }) => (
+const Card = (({ eachSong, index }) => (
 
-  <div className="card">
+  <div className={index % 2 === 0 ? 'card' : 'card2'}>
     <img className="song-image" src={eachSong.albumArtUrl} alt="img" />
     <div className="container-top">
       <div className="container-bottom">
@@ -31,5 +31,6 @@ Card.propTypes = {
     name: PropTypes.string.isRequired,
 
   }).isRequired,
+  index: PropTypes.number.isRequired,
 
 };
