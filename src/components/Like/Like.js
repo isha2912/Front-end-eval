@@ -17,13 +17,13 @@ const Like = (({ eachSong }) => {
     const updateLike = await getData.updateLike(eachSong.id, newLike);
     setLikeData(updateLike.data);
 
-    if (likeData.like === true) {
+    if (likeData.like) {
       src = './assets/heart-red.svg';
     }
   });
 
   return (
-    <button className="hear-button" type="button" onClick={handleLike}>
+    <button className="heart-button" type="button" onClick={handleLike}>
       <img src={src} alt="heart" />
       {likeData.count}
     </button>

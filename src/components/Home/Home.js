@@ -31,11 +31,11 @@ const Home = (({
   return (
     <div className="main-container">
       <h1> Genre</h1>
-      <div className="home-container">
+      <div>
         {Object.keys(genreSongs).map((eachGenre) => (
           <div key={eachGenre} className="row">
             <h1>{eachGenre}</h1>
-            <div className="all-songs">
+            <div className="home-container">
               {genreSongs[eachGenre].map((eachSong) => (
                 <Card
                   key={eachSong.id}
